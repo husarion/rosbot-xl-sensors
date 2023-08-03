@@ -42,6 +42,10 @@
         {
           "title": "IMU Plots",
           "layout": "Plot!1u5bb0v"
+        },
+        {
+          "title": "Production",
+          "layout": "Publish!3yfprcp"
         }
       ]
     },
@@ -267,6 +271,15 @@
       "sidebarDimension": 240,
       "foxglovePanelTitle": "Plot",
       "followingViewWidth": 60
+    },
+    "Publish!3yfprcp": {
+      "topicName": "/cmd_vel",
+      "datatype": "geometry_msgs/msg/Twist",
+      "buttonText": "Motors Test",
+      "buttonTooltip": "",
+      "buttonColor": "#a85600",
+      "advancedView": false,
+      "value": "{\n  \"linear\": {\n    \"x\": 1.0,\n    \"y\": 0,\n    \"z\": 0\n  },\n  \"angular\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": -0.5\n  }\n}"
     }
   },
   "globalVariables": {
