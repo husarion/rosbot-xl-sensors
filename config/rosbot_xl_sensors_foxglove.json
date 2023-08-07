@@ -224,9 +224,9 @@
       "foxglovePanelTitle": "Diff Drive"
     },
     "Gauge!4jffafa": {
-      "path": "/battery.voltage",
-      "minValue": 9.8,
-      "maxValue": 12.6,
+      "path": "/battery_state.voltage",
+      "minValue": 9800,
+      "maxValue": 12600,
       "colorMap": "turbo",
       "colorMode": "colormap",
       "gradient": [
@@ -237,14 +237,14 @@
       "foxglovePanelTitle": "Battery"
     },
     "Indicator!11kizr9": {
-      "path": "/battery.voltage",
+      "path": "/battery_state.voltage",
       "style": "background",
       "fallbackColor": "#000000",
       "fallbackLabel": "Ok",
       "rules": [
         {
           "operator": "<",
-          "rawValue": "10.8",
+          "rawValue": "10800",
           "color": "#ff0000",
           "label": "Plug charger!"
         }
@@ -254,13 +254,13 @@
     "Plot!4dl4s92": {
       "paths": [
         {
-          "value": "/battery.voltage",
+          "value": "/battery_state.voltage",
           "enabled": true,
           "timestampMethod": "receiveTime"
         }
       ],
-      "minYValue": 9.482842712474614,
-      "maxYValue": 13,
+      "minYValue": 9482.842712474614,
+      "maxYValue": 13000,
       "showXAxisLabels": true,
       "showYAxisLabels": true,
       "showLegend": true,
