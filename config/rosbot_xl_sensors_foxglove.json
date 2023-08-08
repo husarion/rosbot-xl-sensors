@@ -36,6 +36,15 @@
       "foxglovePanelTitle": "Plot",
       "followingViewWidth": 30
     },
+    "Publish!3yfprcp": {
+      "topicName": "/cmd_vel",
+      "datatype": "geometry_msgs/msg/Twist",
+      "buttonText": "Motors Test",
+      "buttonTooltip": "",
+      "buttonColor": "#a85600",
+      "advancedView": false,
+      "value": "{\n  \"linear\": {\n    \"x\": 1.0,\n    \"y\": 0,\n    \"z\": 0\n  },\n  \"angular\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": -0.5\n  }\n}"
+    },
     "Tab!2qhku9u": {
       "activeTabIdx": 0,
       "tabs": [
@@ -269,17 +278,59 @@
       "isSynced": true,
       "xAxisVal": "timestamp",
       "sidebarDimension": 240,
-      "foxglovePanelTitle": "Plot",
+      "foxglovePanelTitle": "Voltage",
       "followingViewWidth": 60
     },
-    "Publish!3yfprcp": {
-      "topicName": "/cmd_vel",
-      "datatype": "geometry_msgs/msg/Twist",
-      "buttonText": "Motors Test",
-      "buttonTooltip": "",
-      "buttonColor": "#a85600",
-      "advancedView": false,
-      "value": "{\n  \"linear\": {\n    \"x\": 1.0,\n    \"y\": 0,\n    \"z\": 0\n  },\n  \"angular\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": -0.5\n  }\n}"
+    "Gauge!43atfmu": {
+      "path": "/battery_state.current",
+      "minValue": 0,
+      "maxValue": 3000,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": true,
+      "foxglovePanelTitle": "Battery Current"
+    },
+    "Gauge!1t2ifzu": {
+      "path": "/battery_state.charge",
+      "minValue": 0,
+      "maxValue": 4000,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": true,
+      "foxglovePanelTitle": "Battery Charger Current"
+    },
+    "Plot!3gmoqow": {
+      "paths": [
+        {
+          "value": "/battery_state.current",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/battery_state.charge",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "minYValue": 0,
+      "maxYValue": 5000,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "foxglovePanelTitle": "Current"
     }
   },
   "globalVariables": {
@@ -320,8 +371,23 @@
         "second": "Indicator!11kizr9",
         "direction": "column"
       },
-      "second": "Plot!4dl4s92",
-      "direction": "row"
+      "second": {
+        "first": "Plot!4dl4s92",
+        "second": {
+          "first": {
+            "first": "Gauge!43atfmu",
+            "second": "Gauge!1t2ifzu",
+            "direction": "column"
+          },
+          "second": "Plot!3gmoqow",
+          "direction": "row",
+          "splitPercentage": 40.95744286095124
+        },
+        "direction": "row",
+        "splitPercentage": 38.157892540045665
+      },
+      "direction": "row",
+      "splitPercentage": 18.12550403728454
     },
     "direction": "column",
     "splitPercentage": 67.44897959183673
