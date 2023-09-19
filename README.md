@@ -26,9 +26,8 @@ docker compose up
 
 To open Foxglove type `<ROSBOT_IP/HUSARNET_NAME>:8080` in your browser search bar. 
 
-:::info
-You should use **Chrome/Chromium** browser.
-:::
+> [!NOTE]
+> You should use **Chrome/Chromium** browser.
 
 **5. Open connection.**
  
