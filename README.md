@@ -16,21 +16,31 @@ git clone https://github.com/husarion/rosbot-xl-sensors
 cd rosbot-xl-sensors
 ```
 
-**3. Run Docker Compose.**
+**3. Flash firmware.**
+
+```bash title="husarion@husarion:~$"
+docker stop rosbot-xl microros || true && \
+docker run --rm -it --privileged \
+--mount type=bind,source=/dev/ttyUSBDB,target=/dev/ttyUSBDB \
+husarion/rosbot-xl:humble-0.8.2-20230913 \
+flash-firmware.py -p /dev/ttyUSBDB
+```
+
+**4. Run Docker Compose.**
 
 ```bash title="husarion@husarion:~/rosbot-xl-sensors$"
 docker compose up
 ```
 
-**4. Open Foxglove application in browser.**
+**5. Open Foxglove application in browser.**
 
-To open Foxglove type `<ROSBOT_IP/HUSARNET_NAME>:8080` in your browser search bar. 
+To open Foxglove type `<ROSBOT_IP/HUSARNET_NAME>:8080` in your browser search bar.
 
 > [!NOTE]
 > You should use **Chrome/Chromium** browser.
 
-**5. Open connection.**
- 
+**6. Open connection.**
+
 Inside Foxglove application, find **Data source** on left top and click the **`+`** then click `Open connection`. Use default **WebSocket URL** `ws://<ROSBOT_IP/HUSARNET_NAME>:9090` and click `Open`.
 
 ### Result
