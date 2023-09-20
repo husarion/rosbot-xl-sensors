@@ -20,7 +20,7 @@ x-common-config:
 services:
 
   rosbot-xl:
-    image: husarion/rosbot-xl:humble-0.8.2-20230712
+    image: husarion/rosbot-xl:humble-0.8.2-20230913
     container_name: rosbot-xl
     <<: *common-config
     command: ros2 launch rosbot_xl_bringup bringup.launch.py mecanum:=${MECANUM:-True}
@@ -35,9 +35,9 @@ services:
     command: MicroXRCEAgent udp4 --port 8888
 
   rplidar:
-    image: husarion/rplidar:humble
+    image: husarion/rplidar:humble-1.0.1-20230629
     devices:
-      - ${LIDAR_SERIAL:?err}:/dev/ttyUSB0
+      - /dev/ttyRPLIDAR:/dev/ttyUSB0
     command: ros2 launch sllidar_ros2 sllidar_launch.py serial_baudrate:=${LIDAR_BAUDRATE:-256000}
 
   rosbridge:
