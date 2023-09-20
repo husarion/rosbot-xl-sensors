@@ -236,7 +236,7 @@
       "path": "/battery_state.voltage",
       "minValue": 9800,
       "maxValue": 12600,
-      "colorMap": "turbo",
+      "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
         "#0000ff",
