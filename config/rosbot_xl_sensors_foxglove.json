@@ -234,8 +234,8 @@
     },
     "Gauge!4jffafa": {
       "path": "/battery_state.voltage",
-      "minValue": 9800,
-      "maxValue": 12600,
+      "minValue": 9.800,
+      "maxValue": 12.600,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -268,8 +268,8 @@
           "timestampMethod": "receiveTime"
         }
       ],
-      "minYValue": 9482.842712474614,
-      "maxYValue": 13000,
+      "minYValue": 9.482842712474614,
+      "maxYValue": 13.000,
       "showXAxisLabels": true,
       "showYAxisLabels": true,
       "showLegend": true,
@@ -283,8 +283,8 @@
     },
     "Gauge!43atfmu": {
       "path": "/battery_state.current",
-      "minValue": 0,
-      "maxValue": 3000,
+      "minValue": -3.0,
+      "maxValue": 3.0,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -297,7 +297,7 @@
     "Gauge!1t2ifzu": {
       "path": "/battery_state.charge",
       "minValue": 0,
-      "maxValue": 4000,
+      "maxValue": 3.0,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -320,8 +320,8 @@
           "timestampMethod": "receiveTime"
         }
       ],
-      "minYValue": 0,
-      "maxYValue": 5000,
+      "minYValue": -3.0,
+      "maxYValue": 3.0,
       "showXAxisLabels": true,
       "showYAxisLabels": true,
       "showLegend": true,
