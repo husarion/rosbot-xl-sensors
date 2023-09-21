@@ -253,7 +253,7 @@
       "rules": [
         {
           "operator": "<",
-          "rawValue": "10800",
+          "rawValue": "10.8",
           "color": "#ff0000",
           "label": "Plug charger!"
         }
