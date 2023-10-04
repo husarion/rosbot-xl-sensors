@@ -164,15 +164,6 @@
         }
       },
       "layers": {
-        "e827a6dc-875b-448a-8475-5497577c2e1b": {
-          "visible": true,
-          "frameLocked": true,
-          "label": "URDF",
-          "instanceId": "e827a6dc-875b-448a-8475-5497577c2e1b",
-          "layerId": "foxglove.Urdf",
-          "url": "http://{{.Host}}:{{env "FOXGLOVE_PORT"}}/rosbot_xl.urdf",
-          "order": 1
-        },
         "b2c64820-a936-4f65-82b5-7a04ef902009": {
           "visible": true,
           "frameLocked": true,
@@ -194,6 +185,22 @@
             0
           ],
           "order": 2
+        },
+        "13d2ba45-fe87-488a-9410-c3b1a51c75de": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "URDF",
+          "instanceId": "13d2ba45-fe87-488a-9410-c3b1a51c75de",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "url",
+          "url": "http://localhost:8080/rosbot_xl.urdf",
+          "filePath": "",
+          "parameter": "",
+          "topic": "",
+          "framePrefix": "",
+          "displayMode": "auto",
+          "fallbackColor": "#ffffff",
+          "order": 3
         }
       },
       "publish": {
@@ -205,7 +212,8 @@
         "poseEstimateYDeviation": 0.5,
         "poseEstimateThetaDeviation": 0.26179939
       },
-      "foxglovePanelTitle": "Lidar View"
+      "foxglovePanelTitle": "Lidar View",
+      "imageMode": {}
     },
     "RosOut!b0toow": {
       "searchTerms": [],
@@ -234,8 +242,8 @@
     },
     "Gauge!4jffafa": {
       "path": "/battery_state.voltage",
-      "minValue": 9.800,
-      "maxValue": 12.600,
+      "minValue": 9.8,
+      "maxValue": 12.6,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -269,7 +277,7 @@
         }
       ],
       "minYValue": 9.482842712474614,
-      "maxYValue": 13.000,
+      "maxYValue": 13,
       "showXAxisLabels": true,
       "showYAxisLabels": true,
       "showLegend": true,
@@ -283,8 +291,8 @@
     },
     "Gauge!43atfmu": {
       "path": "/battery_state.current",
-      "minValue": -3.0,
-      "maxValue": 3.0,
+      "minValue": -3,
+      "maxValue": 3,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -297,7 +305,7 @@
     "Gauge!1t2ifzu": {
       "path": "/battery_state.charge",
       "minValue": 0,
-      "maxValue": 3.0,
+      "maxValue": 3,
       "colorMap": "red-yellow-green",
       "colorMode": "colormap",
       "gradient": [
@@ -320,8 +328,8 @@
           "timestampMethod": "receiveTime"
         }
       ],
-      "minYValue": -3.0,
-      "maxYValue": 3.0,
+      "minYValue": -3,
+      "maxYValue": 3,
       "showXAxisLabels": true,
       "showYAxisLabels": true,
       "showLegend": true,
