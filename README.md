@@ -34,14 +34,13 @@ docker compose up
 
 **5. Open Foxglove application in browser.**
 
-To open Foxglove type `<ROSBOT_IP/HUSARNET_NAME>:8080` in your browser search bar.
+To access Foxglove, input the following in your browser's search bar:
 
+- `http://<localhost>:8080/ui` - if you work locally,
+- `http://<ROSBOT_IP>:8080/ui` - if you want to connect to a device connected to the same LAN,
+- `http://<HUSARNET_NAME>:8080/ui` - if you want to connect to the device using Husarnet VPN.
 > [!NOTE]
 > You should use **Chrome/Chromium** browser.
-
-**6. Open connection.**
-
-Inside Foxglove application, find **Data source** on left top and click the **`+`** then click `Open connection`. Use default **WebSocket URL** `ws://<ROSBOT_IP/HUSARNET_NAME>:9090` and click `Open`.
 
 ### Result
 
