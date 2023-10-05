@@ -1,21 +1,20 @@
 services:
 
-  # rosbot-xl:
-  #   image: husarion/rosbot-xl:humble-0.8.2-20230913
-  #   container_name: rosbot-xl
-  #   command: ros2 launch rosbot_xl_bringup bringup.launch.py mecanum:=${MECANUM:-True}
+  rosbot-xl:
+    image: husarion/rosbot-xl:humble-0.8.2-20230913
+    container_name: rosbot-xl
+    command: ros2 launch rosbot_xl_bringup bringup.launch.py mecanum:=${MECANUM:-True}
 
-  # microros:
-  #   image: husarion/micro-ros-agent:humble-3.1.3-20231004
-  #   devices:
-  #     - ${SERIAL_PORT:?err}
-  #   command: ros2 run micro_ros_agent micro_ros_agent serial -D $SERIAL_PORT serial -b 576000
+  microros:
+    image: husarion/micro-xrce-agent:v2.4.1
+    container_name: microros
+    command: MicroXRCEAgent udp4 --port 8888
 
-  # rplidar:
-  #   image: husarion/rplidar:humble-1.0.1-20230427
-  #   devices:
-  #     - /dev/ttyRPLIDAR:/dev/ttyUSB0
-  #   command: ros2 launch sllidar_ros2 sllidar_launch.py serial_baudrate:=${LIDAR_BAUDRATE:-115200}
+  rplidar:
+    image: husarion/rplidar:humble-1.0.1-20230427
+    devices:
+      - /dev/ttyRPLIDAR:/dev/ttyUSB0
+    command: ros2 launch sllidar_ros2 sllidar_launch.py serial_baudrate:=${LIDAR_BAUDRATE:-115200}
 
   rosbridge:
     image: husarion/rosbridge-server:humble-1.3.1-20230505-stable

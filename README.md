@@ -39,6 +39,7 @@ To access Foxglove, input the following in your browser's search bar:
 - `http://<localhost>:8080/ui` - if you work locally,
 - `http://<ROSBOT_IP>:8080/ui` - if you want to connect to a device connected to the same LAN,
 - `http://<HUSARNET_NAME>:8080/ui` - if you want to connect to the device using Husarnet VPN.
+
 > [!NOTE]
 > You should use **Chrome/Chromium** browser.
 
