@@ -23,11 +23,11 @@ services:
     command: ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 
   foxglove:
-    image: husarion/foxglove:v1.72.0
+    image: husarion/foxglove:1.72.0
     ports:
       - 8080:8080
     volumes:
-      - ./config/rosbot_xl_sensors_foxglove.json:/foxglove/foxglove-layout.json
+      - ./config/rosbot_xl_sensors_foxglove.json:/foxglove/default-layout.json
     environment:
       - DS_TYPE=rosbridge-websocket
       - DS_PORT=9090
