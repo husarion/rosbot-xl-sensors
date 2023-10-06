@@ -41,7 +41,7 @@ To access Foxglove, input the following in your browser's search bar:
 - `http://<HUSARNET_NAME>:8080/ui` - if you want to connect to the device using Husarnet VPN.
 
 > [!NOTE]
-> You should use **Chrome/Chromium** browser.
+> You should use the **Chrome/Chromium** browser and wait a few seconds after running `docker compose` to ensure all images boot up correctly.
 
 ### Result
 
