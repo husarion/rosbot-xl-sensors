@@ -45,10 +45,4 @@ To access Foxglove, input the following in your browser's search bar:
 
 ### Result
 
-<div style={{width: '85%', margin: 'auto'}}>
-
-![](/img/other/foxglove_xl_result.gif)
-
-</div>
-
 ![foxglove_result](.docs/foxglove_xl_result.gif)
